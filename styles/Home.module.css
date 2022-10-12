@@ -89,38 +89,15 @@
   margin: 0 5px 5px 5px;
 }
 
-@media (max-width: 950px){
+@media (max-width: 310px){
   .container {
-    width: 45%;
-  }
-}
-
-@media (max-width: 690px) and (orientation: portrait){
-  .container {
-    width: 50%;
-  }
-}
-
-
-
-
-@media (max-width: 390px) and (orientation: portrait){
-  .container {
-    width: 55%;
-  }
-}
-
-@media (max-width: 350px ) and (orientation: portrait) {
-  .container {
-    width: 60%;
+    width: 37%;
   }
 }
 
 
 @media (max-width: 330px) and (orientation: portrait) {
-  .container {
-    width: 65%;
-  }
+
   .info {
     width: 110%;
   }
