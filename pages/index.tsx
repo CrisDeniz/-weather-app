@@ -11,7 +11,7 @@ const [name, setName] = useState('Brasilia')
 const [loading, setLoading] = useState<boolean>()
 const [data, setData] = useState<weather>() 
 const search = useRef<HTMLInputElement>(null)
-
+const [heigth, setHeigth] = useState<number>() 
 
 const URL = `https://api.openweathermap.org/data/2.5/weather?q=${name}&lang=pt_br&units=metric&appid=4db3bb575a8392f175d568fecf2b13c5`
 
@@ -33,13 +33,20 @@ const URL = `https://api.openweathermap.org/data/2.5/weather?q=${name}&lang=pt_b
       setLoading(false)
     }
   }
-  
+
+  useEffect(() => {
+  if (typeof window !== "undefined") {
+      setHeigth(window.innerHeight)
+    }
+  }, [])
+
   useEffect(() => {
     fetchData()
   }, [name])
 
   return (
-    <div className={styles.container}>
+    <div style={{height: `${heigth}px`}}>
+      <div className={styles.container} >
       <span>Tempo Agora</span>
       <div className={styles.search}>
       <input type="text" ref={search} 
@@ -77,6 +84,7 @@ const URL = `https://api.openweathermap.org/data/2.5/weather?q=${name}&lang=pt_b
         <p>Não foi possivel encontrar o nome da cidade</p>
       }
      
+    </div>
     </div>
   )
 }

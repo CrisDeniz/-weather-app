@@ -1,6 +1,5 @@
 html,
-body,
-body div {
+body {
   padding: 0;
   margin: 0;
   display: flex;
@@ -10,6 +9,15 @@ body div {
   align-items: center;
   width: 100%;
   height: 100vh;
+}
+
+body div {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 body {
