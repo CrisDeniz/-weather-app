@@ -12,6 +12,10 @@ body div {
   height: 100vh;
 }
 
+body {
+  position: relative;
+}
+
 @media (max-width: 310px) {
   html,
   body,
