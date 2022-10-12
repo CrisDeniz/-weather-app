@@ -12,6 +12,8 @@ const [loading, setLoading] = useState<boolean>()
 const [data, setData] = useState<weather>() 
 const search = useRef<HTMLInputElement>(null)
 const [heigth, setHeigth] = useState<number>() 
+const [width, setWidth] = useState<number>() 
+
 
 const URL = `https://api.openweathermap.org/data/2.5/weather?q=${name}&lang=pt_br&units=metric&appid=4db3bb575a8392f175d568fecf2b13c5`
 
@@ -37,6 +39,7 @@ const URL = `https://api.openweathermap.org/data/2.5/weather?q=${name}&lang=pt_b
   useEffect(() => {
   if (typeof window !== "undefined") {
       setHeigth(window.innerHeight)
+      setWidth(window.innerWidth)
     }
   }, [])
 
@@ -44,8 +47,14 @@ const URL = `https://api.openweathermap.org/data/2.5/weather?q=${name}&lang=pt_b
     fetchData()
   }, [name])
 
+ 
+
   return (
-    <div style={{height: `${heigth}px`}}>
+    
+    <div style={{
+      height: `${heigth}px`,
+      width: `${width}px`,
+      }}>
       <div className={styles.container} >
       <span>Tempo Agora</span>
       <div className={styles.search}>
