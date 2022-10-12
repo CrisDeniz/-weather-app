@@ -5,8 +5,8 @@
   justify-content: flex-start;
   padding: 0 2rem;
   border-radius: 10px;
-  height: 60%;
-  width: 40%;
+  height: 60vh;
+  width: 40vh;
   color: rgb(0, 130, 255);
   font-weight: 600;
   background: rgb(255, 255, 255);
@@ -91,7 +91,43 @@
 
 @media (max-width: 310px){
   .container {
-    width: 37%;
+    width: 37vh;
+  }
+}
+
+
+
+@media (max-height: 600px) {
+  .container {
+    height: 70vh;
+  }
+}
+
+
+
+@media (max-height: 490)  {
+  .container {
+    height: 75vh;
+  }
+}
+
+
+@media (max-height: 470px)  {
+  .container {
+    height: 90vh;
+    width: 85vh;
+  }
+}
+
+@media (max-height: 380px)  {
+  .container {
+    height: 100vh;
+  }
+}
+
+@media (max-height: 300px)  {
+  .container {
+    height: 120vh;
   }
 }
 
