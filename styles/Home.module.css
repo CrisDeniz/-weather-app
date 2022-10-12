@@ -88,3 +88,49 @@
 .temp  {
   margin: 0 5px 5px 5px;
 }
+
+@media (max-width: 950px){
+  .container {
+    width: 35%;
+  }
+}
+
+@media (max-width: 690px) and (orientation: portrait){
+  .container {
+    width: 40%;
+  }
+}
+
+@media (max-width: 580px) and (orientation: portrait){
+  .container {
+    width: 50%;
+  }
+}
+
+@media (max-width: 470px) and (orientation: portrait){
+  .container {
+    width: 60%;
+  }
+}
+
+@media (max-width: 390px) and (orientation: portrait){
+  .container {
+    width: 65%;
+  }
+}
+
+@media (max-width: 350px ) and (orientation: portrait) {
+  .container {
+    width: 70%;
+  }
+}
+
+
+@media (max-width: 330px) and (orientation: portrait) {
+  .container {
+    width: 75%;
+  }
+  .info {
+    width: 110%;
+  }
+}

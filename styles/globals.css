@@ -12,3 +12,18 @@ body div {
   height: 100vh;
 }
 
+@media (max-width: 310px) {
+  html,
+  body,
+  body div {
+  font-size: 99% ;
+  }
+}
+
+@media (min-width: 1440px){
+  html,
+  body,
+  body div {
+  font-size: 103% ;
+  }
+}
