@@ -51,10 +51,7 @@ const URL = `https://api.openweathermap.org/data/2.5/weather?q=${name}&lang=pt_b
 
   return (
     
-    <div style={{
-      height: `${heigth}px`,
-      width: `${width}px`,
-      }}>
+    <div>
       <div className={styles.container} >
       <span>Tempo Agora</span>
       <div className={styles.search}>
