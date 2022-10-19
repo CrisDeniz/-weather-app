@@ -29,6 +29,13 @@
 
 .info p {
   text-transform: capitalize;
+  margin-right: 5px;
+}
+
+.country {
+  width: 30px;
+  height: 20px;
+  box-shadow: 0 0 4px rgb(212, 212, 212);
 }
 
 .search {

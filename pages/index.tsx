@@ -19,7 +19,8 @@ const URL = `https://api.openweathermap.org/data/2.5/weather?q=${name}&lang=pt_b
       setLoading(true)
       const response = await fetch(URL)
       const data  = await response.json()
-
+      console.log(data);
+      
       if(!data || !response ) {
         throw new Error("Erro na requisição")
       }
@@ -57,12 +58,14 @@ const URL = `https://api.openweathermap.org/data/2.5/weather?q=${name}&lang=pt_b
         }
       }}
       />
-      <button onClick={() => setName(search.current!.value)}> <img src="/search-icon.svg" alt="search icon" /> </button>
+      <button onClick={() => setName(search.current!.value)}> <img src="/search-icon.svg" alt="icone de pesquisa" /> </button>
       </div>
       {data && data.weather &&
         <div className={styles.info}>
-          <p>{data.name} ({data.weather[0].description})</p>
-         
+          <div>
+          <p>{data.name} ({data.weather[0].description}) </p>
+          <img className={styles.country} src={`https://countryflagsapi.com/png/${data.sys.country}`} alt="Bandeira do País" />
+          </div>
             <img src={`http://openweathermap.org/img/wn/${data?.weather[0].icon}@2x.png`} alt="icone" />
           
           <div className={styles.tempBox}>
